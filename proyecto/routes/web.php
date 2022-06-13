@@ -18,6 +18,13 @@ Route::get('/', function () {
     return view('prueba.principal');
 });
 
+Route::get('/', function () {
+    return view('layout');
+});
+
+
+
+
 Route::get('/primeraVista', function () {
     return view('practica2.prueba2.vistaPrincipal');
 });
@@ -26,6 +33,8 @@ Route::get('empleados', [EmpleadosController::class, 'index'])->name('empleadoIn
 Route::get('empleados/crear', [EmpleadosController::class, 'crear'])->name('empleadoCrear');
 Route::get('empleados/mostrar', [EmpleadosController::class, 'mostrar'])->name('empleadoMostrar');
 Route::get('empleados/editar', [EmpleadosController::class, 'editar'])->name('empleadoEditar');
+
+
 
 
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>
-        Hola estoy en la vista principal
+       Estoy en welcome
     </h1>
 </body>
 </html>

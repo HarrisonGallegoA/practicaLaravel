@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>
-        Estoy en la pagina princiipal
+        Estoy en la pagina principal prueba
     </h1>
 </body>
 </html>
