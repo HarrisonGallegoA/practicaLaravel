@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('empleados', function (Blueprint $table) {
-            $table->integer('idCargo')->unsigned();
+        Schema::create('cargos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre',50 );
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('empleados', function (Blueprint $table) {
-            $table->dropColumn('idCargo');
-        });
+        Schema::dropIfExists('cargo');
     }
 };
