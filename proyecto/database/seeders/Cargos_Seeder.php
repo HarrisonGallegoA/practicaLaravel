@@ -28,5 +28,7 @@ class Cargos_Seeder extends Seeder
             'nombre'=> 'Coordinador',
         ]);
 
+        Cargo::factory()->times(10)->create();
+
     }
 }

@@ -39,5 +39,8 @@ class Empleados_Seeder extends Seeder
         'edad' => 23,
         'idCargo' => 3
     ]);
+
+    Empleado::factory()->times(50)->create();
+            
     }
 }
