@@ -80,6 +80,7 @@
         {{ session('mensaje') }}
     </div>
 @endif
+<div class="container">
     <table class="table">
         <thead>
         <tr>
@@ -113,6 +114,7 @@
         @endforelse
         </tbody>
     </table>
+</div>
     <div class="d-flex justify-content-center">
         {{ $empleados->links() }}
     </div>
