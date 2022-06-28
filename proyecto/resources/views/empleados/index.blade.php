@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                         <button type="submit"  class="btn btn-primary">Guardar</button>
                     </div>
                 </form>
@@ -75,6 +75,11 @@
     <!-- FIN Modal CREAR EMPLEADO-->
     </div>
     <br>
+@if (session('mensaje'))
+    <div class="alert alert-success">
+        {{ session('mensaje') }}
+    </div>
+@endif
     <table class="table">
         <thead>
         <tr>
@@ -102,6 +107,7 @@
                     </form>
                 </td>
             </tr>
+           
         @empty
             No hay empleados
         @endforelse
@@ -110,4 +116,14 @@
     <div class="d-flex justify-content-center">
         {{ $empleados->links() }}
     </div>
+    @section('scripts')
+    @if($errors->any())
+    <script>
+        $(document).ready(function(){
+            $('#crearEmpleadoModal').modal('show')
+        })
+    </script>
+    
+    @endif
+@endsection
 @endsection()
